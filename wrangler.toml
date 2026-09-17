@@ -7,7 +7,7 @@ keep_vars = true
 
 [vars]
 WS_PATH = "galaxy-tunnel"
-PROXYIP = "cdn.cloudflare.net"
+PROXYIP = "bpb.yousef.isegaro.com"
 #PROXY_LIST_URL = ""
 DNS_RESOLVER_URL = ["https://cloudflare-dns.com/dns-query",
 "https://dns.google/dns-query",
