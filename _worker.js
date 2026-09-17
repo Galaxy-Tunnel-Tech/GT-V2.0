@@ -10,10 +10,7 @@ const DEFAULT_LOCAL_PROXIES = [
   "www.visa.com.sg"
 ];
 
-const DEFAULT_DOH_URL = ["https://cloudflare-dns.com/dns-query",
-"https://dns.google/dns-query",
-"https://dns.quad9.net/dns-query",
-"https://dns.adguard-dns.com/dns-query"];
+const DEFAULT_DOH_URL = ["https://cloudflare-dns.com/dns-query","https://dns.google/dns-query","https://dns.quad9.net/dns-query","https://dns.adguard-dns.com/dns-query"];
 const CONNECTION_TIMEOUT_MS = 30000; // 30 seconds timeout
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 60;
 const DEFAULT_WS_PATH = "galaxy-tunnel";
@@ -1440,7 +1437,16 @@ const worker_default = {
         });
       }
 
-      return await proxyOverWSHandler(request, userID, proxyIP, rawProxyListUrl, dohURL, logger);
+      return await proxyOverWSHandler(
+        request,
+        userID,
+        proxyIP,
+        rawProxyListUrl,
+        dohURL,
+        logger,
+        routeRulesRaw,
+        routeServersRaw
+      );
     }
 
     // Public visitors see the requested EdgeTunnel diagnostic mask page.
@@ -1478,7 +1484,16 @@ const worker_default = {
 // ============================================
 // WEBSOCKET PROXY STREAM HANDLER
 // ============================================
-async function proxyOverWSHandler(request, userID, defaultProxy, rawProxyListUrl, dohURL, logger) {
+async function proxyOverWSHandler(
+  request,
+  userID,
+  defaultProxy,
+  rawProxyListUrl,
+  dohURL,
+  logger,
+  routeRulesRaw = "",
+  routeServersRaw = ""
+) {
   const webSocketPair = new WebSocketPair();
   const [client, webSocket] = Object.values(webSocketPair);
   webSocket.accept();
