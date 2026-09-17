@@ -7,7 +7,11 @@ keep_vars = true
 
 [vars]
 WS_PATH = "galaxy-tunnel"
-PROXYIP = "cdn-b100.xn--b6gac.eu.org"
-PROXY_LIST_URL = "https://raw.githubusercontent.com/proxzero/galaxy-subdomain/refs/heads/main/PROXYIP.txt"
-DNS_RESOLVER_URL = "https://cloudflare-dns.com/dns-query"
+PROXYIP = "cdn.cloudflare.net"
+#PROXY_LIST_URL = ""
+DNS_RESOLVER_URL = ["https://cloudflare-dns.com/dns-query",
+"https://dns.google/dns-query",
+"https://dns.quad9.net/dns-query",
+"https://dns.adguard-dns.com/dns-query"]
+"
 RATE_LIMIT_PER_MINUTE = "60"
