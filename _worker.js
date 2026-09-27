@@ -4,9 +4,9 @@ import { connect } from "cloudflare:sockets";
 // CONSTANTS & DEFAULT CONFIGURATION
 // ============================================
 const DEFAULT_LOCAL_PROXIES = [
-  "lelouch.abrdns.com"
-"blacknight.abrdns.com"
- "net.galaxytunnel.linkpc.net"
+  "lelouch.abrdns.com",
+"blacknight.abrdns.com",
+ "net.galaxytunnel.linkpc.net",
   "galax.cc.cd",
   "privacy.bbroot.com",
   "pro.galaxytunnel.linkpc.net"
