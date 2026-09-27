@@ -4,13 +4,15 @@ import { connect } from "cloudflare:sockets";
 // CONSTANTS & DEFAULT CONFIGURATION
 // ============================================
 const DEFAULT_LOCAL_PROXIES = [
-  "bpb.yousef.isegaro.com",
-  "icook.hk",
-  "icook.tw",
-  "www.visa.com.sg"
+  "lelouch.abrdns.com"
+"blacknight.abrdns.com"
+ "net.galaxytunnel.linkpc.net"
+  "galax.cc.cd",
+  "privacy.bbroot.com",
+  "pro.galaxytunnel.linkpc.net"
 ];
 
-const DEFAULT_DOH_URL = ["https://cloudflare-dns.com/dns-query","https://dns.google/dns-query","https://dns.quad9.net/dns-query","https://dns.adguard-dns.com/dns-query"];
+const DEFAULT_DOH_URL = ["https://cloudflare-dns.com/dns-query","https://dns.google/dns-query","https://dns.quad9.net/dns-query","https://dns.adguard-dns.com/dns-query","https://dns.alidns.com/dns-query"];
 const CONNECTION_TIMEOUT_MS = 30000; // 30 seconds timeout
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 60;
 const DEFAULT_WS_PATH = "galaxy-tunnel";
