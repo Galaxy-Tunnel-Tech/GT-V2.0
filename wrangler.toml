@@ -7,10 +7,19 @@ keep_vars = true
 
 [vars]
 WS_PATH = "galaxy-tunnel"
-PROXYIP = "bpb.yousef.isegaro.com"
+PROXYIP = [
+  "lelouch.abrdns.com",
+"blacknight.abrdns.com",
+ "net.galaxytunnel.linkpc.net",
+  "galax.cc.cd",
+  "privacy.bbroot.com",
+  "pro.galaxytunnel.linkpc.net"
+]
+
 #PROXY_LIST_URL = ""
 DNS_RESOLVER_URL = ["https://cloudflare-dns.com/dns-query",
 "https://dns.google/dns-query",
 "https://dns.quad9.net/dns-query",
-"https://dns.adguard-dns.com/dns-query"]
+"https://dns.adguard-dns.com/dns-query",
+"https://dns.alidns.com/dns-query"]
 RATE_LIMIT_PER_MINUTE = "60"
